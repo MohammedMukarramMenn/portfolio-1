@@ -1,0 +1,255 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../libs/mindar/mindar-image-three.prod.js"></script>
+    <script src="./main-css.js" type="module"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      html,
+      body {
+        position: relative;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      #ar-div {
+        width: 1000px;
+        height: 1000px;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }
+      #ar-div2 {
+        width: 1000px;
+        height: 1000px;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .pfp {
+        border-radius: 50%;
+        border: 12px solid black;
+        transform: translateX(180%);
+      }
+      .title {
+        color: black;
+        transform: translateX(190%);
+        font-size: 180px;
+      }
+      .fa {
+        padding: 80px;
+        font-size: 160px;
+        margin: 5%;
+        width: 200px;
+        text-align: center;
+        text-decoration: none;
+        transform: translateY(300%);
+        background: white;
+        color: black;
+      }
+
+      #particles-js {
+        width: 1000px;
+        height: 1000px;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 1000px;
+        height: 1000px;
+        transform: translateX(-150%);
+      }
+
+      #iframe-container {
+        width: 1200px;
+        height: 1600px;
+        visibility: hidden;
+        pointer-events: none; /* Allows interaction with underlying AR scene */
+        margin-left: -150%;
+      }
+      #my-iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ar-div">
+      <img class="pfp" src="../../assets/targets/self.jpeg" alt="AR Image" />
+      <h1 class="title">Mohmmed Mukarram Menn</h1>
+    </div>
+    <div id="ar-div2">
+      <a href="#"  id="website-icon" class="fa fa-globe"></a>
+      <a
+        href="mailto:mukarrammenn@gmail.com"
+        target="_blank"
+        class="fa fa-envelope"
+      ></a>
+      <a
+        href="https://github.com/MohammedMukarramMenn"
+        target="_blank"
+        class="fa fa-github"
+      ></a>
+      <a
+        href="https://www.instagram.com/mukarram_menn/"
+        target="_blank"
+        class="fa fa-instagram"
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/mohmmed-mukarram-menn-b308131b7"
+        target="_blank"
+        class="fa fa-linkedin"
+      ></a>
+    </div>
+    <div id="iframe-container">
+      <iframe id="my-iframe" src="https://mukarram.in"></iframe>
+    </div>
+    <div id="particles-js"></div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 50,
+          density: {
+            enable: true,
+            value_area: 800,
+          },
+        },
+        color: {
+          value: "#000000",
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000",
+          },
+          polygon: {
+            nb_sides: 5,
+          },
+          image: {
+            src: "img/github.svg",
+            width: 100,
+            height: 100,
+          },
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: {
+            enable: false,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false,
+          },
+        },
+        size: {
+          value: 15,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 40,
+            size_min: 1,
+            sync: false,
+          },
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#000000",
+          opacity: 0.4,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 6,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200,
+          },
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "grab",
+          },
+          onclick: {
+            enable: true,
+            mode: "push",
+          },
+          resize: true,
+        },
+        modes: {
+          grab: {
+            distance: 140,
+            line_linked: {
+              opacity: 1,
+            },
+          },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+          },
+          push: {
+            particles_nb: 4,
+          },
+          remove: {
+            particles_nb: 2,
+          },
+        },
+      },
+      retina_detect: true,
+    });
+
+    /* ---- stats.js config ---- */
+
+    var count_particles, stats, update;
+    stats = new Stats();
+    stats.setMode(0);
+    stats.domElement.style.position = "absolute";
+    stats.domElement.style.left = "0px";
+    stats.domElement.style.top = "0px";
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector(".js-count-particles");
+    update = function () {
+      stats.begin();
+      stats.end();
+      if (
+        window.pJSDom[0].pJS.particles &&
+        window.pJSDom[0].pJS.particles.array
+      ) {
+        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+      }
+      requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+  </script>
+</html>

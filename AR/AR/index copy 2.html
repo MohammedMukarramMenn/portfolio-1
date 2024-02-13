@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title>Virtual Me | AR Portfolio</title>
+    <meta name="title" content="Virtual Me | AR Portfolio" />
+    <meta
+      property="og:description"
+      content="Unlock my world through AR. Scan the business card, dive into my portfolio."
+    />
+    <meta name="keywords" content="AR Portfolio | Mohmmed Mukarram Menn" />
+    <meta property="og:url" content="ar.mukarram.in" />
+    <link rel="icon" href="./favicon.ico" type="image/png" />
+    <meta property="og:image" content="https://mukarram.in/avatar-hover.jpg" />
+    <meta name="distribution" content="global" />
+    <meta http-equiv="content-language" content="en-gb" />
+    <meta name="geo.region" content="IN-MH" />
+    <meta name="geo.placename" content="Mumbai" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Mukarram Menn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./mindar/mindar-image-three.prod.js"></script>
+    <script src="./main.js" type="module"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div id="scanning" class="hidden">
+      <div class="inner">
+        <img src="./card.jpg" />
+        <!-- <div class="scanline"></div> -->
+      </div>
+    </div>
+    <div id="ar-div">
+      <img class="pfp" src="./gmail pfp.gif" alt="AR Image" />
+    </div>
+    <div id="title-div">
+      <h1 class="title">Mohmmed Mukarram &nbsp;&nbsp;</h1>
+    </div>
+    <div id="ar-div2">
+      <a
+        href="https://mukarram.in"
+        id="website-icon"
+        target="_blank"
+        class="fa fa-globe"
+      ></a>
+      <a
+        href="mailto:mukarrammenn@gmail.com"
+        target="_blank"
+        class="fa fa-envelope"
+      ></a>
+      <a
+        href="./resume.pdf"
+        target="_blank"
+        class="fa fa-file"
+      ></a>
+      <a
+        href="https://github.com/MohammedMukarramMenn"
+        target="_blank"
+        class="fa fa-github"
+      ></a>
+      <a
+        href="https://www.instagram.com/mukarram_menn/"
+        target="_blank"
+        class="fa fa-instagram"
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/mohmmed-mukarram-menn-b308131b7"
+        target="_blank"
+        class="fa fa-linkedin"
+      ></a>
+    </div>
+    <!-- <div id="ar-div-button">
+      <a
+        href="https://mukarram.in"
+        id="website-icon"
+        target="_blank"
+        class="fa fa-globe pill"
+      ></a>
+    </div>
+    <div id="ar-div-button2">
+      <i
+        href="https://mukarram.in"
+        id="website-icon"
+        target="_blank"
+        type="button"
+        class="fa fa-file-pdf-o pill2 "
+      >
+        Resume
+      </i>
+    </div> -->
+    <!-- <div id="iframe-container">
+      <iframe id="my-iframe" src="https://mukarram.in"></iframe>
+    </div> -->
+    <div id="container"></div>
+  </body>
+</html>
